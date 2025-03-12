@@ -1,12 +1,10 @@
 import Container from "../../../Container";
 import Logo from "../Logo";
-import { useAuthContext } from "../../../contexts/AuthContext";
 import NavbarBeforeAuthentication from "./HeaderBeforeAuthentication";
 import NavbarAfterAuthentication from "./HeaderAfterAuthentication";
 import { navLinks } from "../../../content/navbarMenu";
 
 const Header = ({ sidebarToggler }) => {
-  const user = useAuthContext();
   return (
     <>
       <header className="w-full h-20 bg-white dark:bg-gray-900 flex items-center">
@@ -15,11 +13,7 @@ const Header = ({ sidebarToggler }) => {
             <Logo />
 
             {/* dynamic navbar menu based on authentication status */}
-            {user === false ? (
-              <NavbarBeforeAuthentication navbarMenu={navLinks} />
-            ) : (
-              <NavbarAfterAuthentication navbarMenu={navLinks} />
-            )}
+            <NavbarBeforeAuthentication navbarMenu={navLinks} />
 
             {/* sidebar menu toggler for mobile devices */}
             <button

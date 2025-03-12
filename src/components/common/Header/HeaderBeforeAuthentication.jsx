@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavbarBeforeAuthentication = ({ navbarMenu }) => {
   const currentLocation = useLocation();
@@ -25,7 +25,7 @@ const NavbarBeforeAuthentication = ({ navbarMenu }) => {
         </ul>
       </nav>
 
-      <div className="flex items-center gap-4 ml-4">
+      {/* <div className="flex items-center gap-4 ml-4">
         <div className="sm:flex sm:gap-4">
           <Link
             className="block rounded-md outline outline-1 outline-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-teal-500"
@@ -59,7 +59,7 @@ const NavbarBeforeAuthentication = ({ navbarMenu }) => {
             />
           </svg>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

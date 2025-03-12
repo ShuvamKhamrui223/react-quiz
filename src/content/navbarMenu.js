@@ -9,10 +9,4 @@ export const navLinks = [
     item: "quiz",
     pageUrl: "/quiz",
   },
-
-  {
-    itemId: 3,
-    item: "about",
-    pageUrl: "/about",
-  },
 ];
